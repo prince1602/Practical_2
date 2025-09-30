@@ -1,3 +1,9 @@
+# Practical-2: Activity Lifecycle & Basic UI Demonstration
+
+## Project Overview:
+
+This Android application showcases the Activity Lifecycle and a basic UI. The main screen displays a "Hello World" `TextView` centered on the screen, with custom styling, along with Log messages, Toasts, and Snackbars for each lifecycle method.
+
 ### Features & Requirements
 
 + **Activity Lifecycle**: All lifecycle callbacks (`onCreate`, `onStart`, `onResume`, `onPause`, `onStop`, `onDestroy`, etc.) should:
