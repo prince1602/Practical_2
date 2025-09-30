@@ -35,3 +35,44 @@ This Android application showcases the Activity Lifecycle and a basic UI. The ma
   - Logcat entries for each lifecycle method
   - Toasts and Snackbars displaying lifecycle events
     (E.g.: "onPause called" appears via both a Toast and a Snackbar)
+### Screenshots
+Below are screenshots demonstrating the application UI :
+
+<img width="448" height="667" alt="pra2" src="https://github.com/user-attachments/assets/65ed206a-b3ac-4f51-b9f0-ae7d6659a55d" />
+
+
+
+### Activity Lifecycle Summary
+Here’s a short explanation of each lifecycle method used in this project:
+
+`onCreate()` → Called once when the activity is created. Initialize UI, set up layouts.
+
+`onStart()` → Activity becomes visible to the user.
+
+`onResume()` → Activity is now active and ready for interaction.
+
+`onPause()` → Another activity is partially covering it. Pause lightweight processes.
+
+`onStop()` → Activity is completely hidden. Release heavy resources.
+
+`onRestart()` → Called before onStart() if activity is coming back from stopped state.
+
+`onDestroy()` → Final cleanup before activity is destroyed.
+
+⚡ Quick flow: Create → Start → Resume → (Running) → Pause → Stop → Restart/Destroy
+
+### Further Notes
++ Ensure ConstraintLayout is used in activity_main.xml
+
++ Use android:id="@+id/textViewHelloWorld" (or similar) for TextView
+
++ Include lifecycle callbacks in MainActivity.kt, e.g.:
+
+
+```kotlin
+    override fun onStart(){
+    super.onStart()
+    Log.d(TAG, "onStart called")
+    Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show()
+    Snackbar.make(findViewById(R.id.textViewHelloWorld), "onStart", Snackbar.LENGTH_SHORT).show()
+    }
